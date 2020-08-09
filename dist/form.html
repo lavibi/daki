@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daki</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/client/css/app.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="fixed bg-gray-100 top-0 left-0 bottom-0 w-full overflow-y-auto max-w-nav border-r">
+      <div class="flex p-4">
+        <a class="w-50px h-50px" href="/index.html"><img src="/client/image/client_logo.jpg" class="rounded w-full"></a>
+        <a class="ml-auto self-center" style="width: 30px;" href="/user.html"><img src="/client/image/client_logo.jpg" class="rounded-full"></a>
+      </div>
+      <div class="p-4">
+        <ul>
+          <li class="my-1"><a class="block px-2 py-1 hover:bg-gray-200 rounded" href="#">Page</a></li>
+          <li class="my-1"><a class="block px-2 py-1 hover:bg-gray-200 rounded" href="#">Product</a></li>
+          <li class="my-1"><a class="block px-2 py-1 hover:bg-gray-200 rounded" href="#">Article</a></li>
+        </ul>
+        <hr class="border-0 border-t my-2">
+        <ul>
+          <li class="my-1"><a class="inline-block px-2 py-1" href="#">File</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- MAIN PAGE -->
+    <div class="ml-nav p-8">
+      <div class="w-full">
+        <!-- header -->
+        <div class="border-b mb-4">
+          <span class="inline-block font-bold uppercase text-xs text-teal-500">Collection</span>
+          <h1 class="text-3xl leading-tight font-semibold mt-0">Collection Name</h1>
+        </div>
+
+        <!-- content -->
+        <div>
+          <h3 class="text-2xl leading-tight mb-4">New collection name</h3>
+          <form>
+            <div class="mb-4">
+              <label class="block font-bold mb-2">Name</label>
+              <div class="control">
+                <input class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" type="text" placeholder="Text input">
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block font-bold">Username</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" type="text" placeholder="Text input" value="bulma">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </div>
+              <p class="help is-success">This username is available</p>
+            </div>
+
+            <div class="field">
+              <label class="block font-bold">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <p class="help is-danger">This email is invalid</p>
+            </div>
+
+            <div class="field">
+              <label class="block font-bold">Subject</label>
+              <div class="control">
+                <div class="select">
+                  <select class="inline-flex w-full cursor-pointer border px-2 py-1 rounded focus:outline-none focus:shadow-outline">
+                    <option>Select dropdown</option>
+                    <option>With options</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="block font-bold">Message</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Textarea"></textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  I agree to the <a href="#">terms and conditions</a>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="question">
+                  Yes
+                </label>
+                <label class="radio">
+                  <input type="radio" name="question">
+                  No
+                </label>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="mr-2">
+                <button class="inline-flex px-4 py-2 bg-indigo-500 text-white font-bold rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
+              </div>
+              <div class="control">
+                <button class="inline-flex px-4 py-2 bg-indigo-500 text-white font-bold rounded focus:outline-none focus:shadow-outline" type="reset">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

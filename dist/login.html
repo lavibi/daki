@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daki</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/client/css/app.css" />
+  </head>
+  <body>
+    <div class="fixed flex justify-center items-center top-0 left-0 bottom-0 right-0 bg-no-repeat bg-cover" style="background-image: url(/client/image/login_cover.jpg);">
+      <div class="bg-white shadow p-8 rounded" style="width: 400px;">
+        <div class="h-50px flex justify-center mb-4"><img src="/client/image/client_logo.jpg" class="rounded w-50px"></div>
+        <h3 class="text-3xl text-center font-bold mb-4">Welcome back</h3>
+        <form method="post" action="/login" autocomplete="off">
+          <div class="mb-4">
+            <label class="block font-bold mb-2">Username</label>
+            <div>
+              <input class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" type="text" placeholder="">
+            </div>
+          </div>
+          <div class="mb-8">
+            <label class="block font-bold mb-2">Password</label>
+            <div>
+              <input class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" type="password" placeholder="">
+            </div>
+          </div>
+          <div>
+            <div>
+              <button class="select-none w-full px-6 py-3 bg-indigo-500 text-white text-center text-xl font-bold rounded focus:outline-none focus:shadow-outline" type="submit">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

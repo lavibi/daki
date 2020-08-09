@@ -1,0 +1,9 @@
+.app-nav {
+  max-width: 280px;
+  @apply fixed bg-black w-full top-0 left-0 bottom-0 overflow-y-auto;
+}
+
+.app-content {
+  margin-left: 280px;
+  @apply p-4;
+}
