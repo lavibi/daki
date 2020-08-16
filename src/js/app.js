@@ -79,7 +79,7 @@ formUploadButton.addEventListener('click', async (e) => {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
-      'Content-Type': 'multipart/form-data',
+      'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: formData
   });
