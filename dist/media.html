@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daki</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/client/css/app.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="fixed bg-gray-100 top-0 left-0 bottom-0 w-full overflow-y-auto max-w-nav border-r">
+      <div class="flex p-4">
+        <a class="w-50px h-50px" href="/index.html"><img src="/client/image/client_logo.jpg" class="rounded w-full"></a>
+        <a class="ml-auto self-center" style="width: 30px;" href="/user.html"><img src="/client/image/client_logo.jpg" class="rounded-full"></a>
+      </div>
+      <div class="p-4">
+        <ul>
+          <li class="my-1"><a class="block px-2 py-1 hover:bg-gray-200 rounded" href="#">Page</a></li>
+          <li class="my-1"><a class="block px-2 py-1 hover:bg-gray-200 rounded" href="#">Product</a></li>
+          <li class="my-1"><a class="block px-2 py-1 hover:bg-gray-200 rounded" href="#">Article</a></li>
+        </ul>
+        <hr class="border-0 border-t my-2">
+        <ul>
+          <li class="my-1"><a class="inline-block px-2 py-1" href="media.html">File</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- MAIN PAGE -->
+    <div class="ml-nav p-8">
+      <div class="w-full">
+        <!-- header -->
+        <div class="flex border-b mb-4">
+          <div>
+            <span class="inline-block font-bold uppercase text-xs text-teal-500">Collection</span>
+            <h1 class="text-3xl leading-tight font-semibold mt-0">Media</h1>
+          </div>
+        </div>
+
+        <!-- content -->
+        <form class="hidden" id="file-form" action="" method="POST" enctype="multipart/form-data">
+          <input id="file-browser" type="file" name="file">
+        </form>
+        <div>
+          <div id="media-list" class="flex flex-wrap">
+            <div id="form-upload" class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
+              <img class="max-h-full" id="file-preview" src="">
+              <div id="file-trigger-browser" class="absolute top-2 left-2 right-2 bottom-2 border-2 border-dashed flex justify-center items-center cursor-pointer">
+                Choose media
+              </div>
+              <div id="form-upload-control" class="hidden absolute right-0 bottom-0 justify-center items-center">
+                <button id="form-upload-button" class="appearance-none font-bold cursor-pointer py-2 px-4 text-sm rounded border focus:outline-none bg-indigo-600 text-white" href="#">+</a>
+              </div>
+            </div>
+            <div class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
+              <img class="max-h-full" src="media/ts_1597565206_9dd11db07f36870532cd_yunfan-xu-3B3oCC4h5xU-unsplash.jpg">
+              <div class="absolute right-3 bottom-3">
+                <a class="font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="">x</a>
+              </div>
+            </div>
+            <div class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
+              <img class="max-h-full" src="media/ts_1597571203_338a1db83389ec583a1c_sandra-seitamaa-7E44aehI4Uo-unsplash.jpg">
+              <div class="absolute right-3 bottom-3">
+                <a class="font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="">x</a>
+              </div>
+            </div>
+            <div class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
+              <img class="max-h-full" src="media/ts_1597565206_9dd11db07f36870532cd_yunfan-xu-3B3oCC4h5xU-unsplash.jpg">
+              <div class="absolute right-3 bottom-3">
+                <a class="font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="">x</a>
+              </div>
+            </div>
+            <div class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
+              <img class="max-h-full" src="media/ts_1597571203_338a1db83389ec583a1c_sandra-seitamaa-7E44aehI4Uo-unsplash.jpg">
+              <div class="absolute right-3 bottom-3">
+                <a class="font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="">x</a>
+              </div>
+            </div>
+            <div class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
+              <img class="max-h-full" src="media/ts_1597565206_9dd11db07f36870532cd_yunfan-xu-3B3oCC4h5xU-unsplash.jpg">
+              <div class="absolute right-3 bottom-3">
+                <a class="font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="">x</a>
+              </div>
+            </div>
+            <div class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
+              <img class="max-h-full" src="media/ts_1597571203_338a1db83389ec583a1c_sandra-seitamaa-7E44aehI4Uo-unsplash.jpg">
+              <div class="absolute right-3 bottom-3">
+                <a class="font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="">x</a>
+              </div>
+            </div>
+          </div>
+          <div class="mb-4 pt-4">
+            <a class="inline-block font-bold cursor-pointer py-2 px-4 text-sm rounded border focus:outline-none hover:bg-indigo-600 hover:text-white" href="">Next</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/client/js/app.js"></script>
+  </body>
+</html>
