@@ -78,9 +78,6 @@ formUploadButton.addEventListener('click', async (e) => {
   const response = await fetch(urlUploadFile, {
     method: 'POST',
     credentials: 'same-origin',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
     body: formData
   });
 
