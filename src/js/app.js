@@ -93,3 +93,24 @@ formUploadButton.addEventListener('click', async (e) => {
 
   buildPhotoElement(data.id, data.file)
 })
+
+mediaList.addEventListener('click', async (e) => {
+  // e.preventDefault();
+  // console.log(e.target)
+  if (!e.target.classList.contains('media-file-del')) {
+    return;
+  }
+
+  e.preventDefault();
+
+  const url = e.target.getAttribute('href');
+
+  const response = await fetch(url);
+  const data = await response.json();
+
+  if (data.error) {
+    return;
+  }
+
+  e.target.closest('.media-file').remove();
+})
