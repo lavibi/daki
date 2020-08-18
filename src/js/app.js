@@ -10,11 +10,11 @@ let formIsUpload = false;
 
 const buildPhotoElement = (id, file) => {
   const photoEl = document.createElement('div')
-  photoEl.className = 'flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative';
+  photoEl.className = 'media-file flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative';
   photoEl.innerHTML = `
     <img class="max-h-full" src="${file}">
     <div class="absolute right-3 bottom-3">
-      <a class="font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="/file/${id}/delete">x</a>
+      <a class="media-file-del font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="/file/${id}/delete">x</a>
     </div>
   `;
 
