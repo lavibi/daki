@@ -5,7 +5,7 @@ module.exports = {
       './dist/**/*.html'
     ],
     options: {
-      whitelist: ['overflow-hidden'],
+      whitelist: ['overflow-hidden', 'w-2/5', 'w-1/5'],
     }
   },
   theme: {
