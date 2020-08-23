@@ -4,10 +4,18 @@ module.exports = {
     content: [
       './dist/**/*.html'
     ],
+    options: {
+      whitelist: ['overflow-hidden'],
+    }
   },
   theme: {
     extend: {},
   },
-  variants: {},
+  variants: {
+    container: [],
+  },
   plugins: [],
+  corePlugins: {
+    container: false,
+  }
 }
