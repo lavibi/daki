@@ -30,7 +30,6 @@ class Form {
     this.isSubmitted = true;
 
     const form = e.target;
-    console.log(form);
     const body = new FormData(form);
     const method = 'post';
     const link = form.getAttribute('action');
@@ -60,7 +59,6 @@ class Form {
         helperTextEl.classList.add('text-indigo-500');
       }
     } catch (e) {
-      console.log(e)
       helperTextEl.innerText = 'Please try again.';
       helperTextEl.classList.add('text-red-500')
     }
