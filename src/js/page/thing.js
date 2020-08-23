@@ -1,10 +1,12 @@
 import modal from '../lib/modal';
 import del from '../lib/delete';
+import form from '../lib/form';
 
 const thingTransEls = document.querySelectorAll('.thing-trans');
 
 export default () => {
   del('.thing-delete', { parent: '.thing' });
+  form('body', '.form-data', {});
 
   // Translate modal
   modal(thingTransEls, '#thing-trans-modal');

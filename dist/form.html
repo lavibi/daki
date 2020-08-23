@@ -38,94 +38,54 @@
         <!-- content -->
         <div>
           <h3 class="text-2xl leading-tight mb-4">New collection name</h3>
-          <form>
+          <form class="form-data" method="POST" action="form.json">
             <div class="mb-4">
               <label class="block font-bold mb-2">Name</label>
-              <div class="control">
-                <input class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" type="text" placeholder="Text input">
+              <div>
+                <input name="name" class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" type="text" placeholder="Text input">
               </div>
             </div>
 
             <div class="mb-4">
               <label class="block font-bold">Username</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" type="text" placeholder="Text input" value="bulma">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
-                </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-check"></i>
-                </span>
+              <div>
+                <input name="user" class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" type="text" placeholder="Text input">
               </div>
-              <p class="help is-success">This username is available</p>
             </div>
 
-            <div class="field">
-              <label class="block font-bold">Email</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-exclamation-triangle"></i>
-                </span>
-              </div>
-              <p class="help is-danger">This email is invalid</p>
-            </div>
-
-            <div class="field">
+            <div class="mb-4">
               <label class="block font-bold">Subject</label>
-              <div class="control">
-                <div class="select">
-                  <select class="inline-flex w-full cursor-pointer border px-2 py-1 rounded focus:outline-none focus:shadow-outline">
-                    <option>Select dropdown</option>
-                    <option>With options</option>
-                  </select>
-                </div>
+              <div>
+                <select name="subject" class="inline-flex w-full cursor-pointer border border-gray-500 px-2 py-2 rounded focus:outline-none focus:shadow-outline">
+                  <option value="1">Select dropdown</option>
+                  <option value="2">With options</option>
+                </select>
               </div>
             </div>
 
-            <div class="field">
+            <div class="mb-4">
               <label class="block font-bold">Message</label>
-              <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="control">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  I agree to the <a href="#">terms and conditions</a>
-                </label>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="control">
-                <label class="radio">
-                  <input type="radio" name="question">
-                  Yes
-                </label>
-                <label class="radio">
-                  <input type="radio" name="question">
-                  No
-                </label>
+              <div>
+                <textarea name="message" class="inline-flex appearance-none w-full border border-gray-500 shadow-inner rounded px-2 py-1 focus:outline-none focus:shadow-outline" rows="6" placeholder="Textarea"></textarea>
               </div>
             </div>
 
             <div class="flex">
               <div class="mr-2">
-                <button class="inline-flex px-4 py-2 bg-indigo-500 text-white font-bold rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
+                <button class="inline-flex px-4 py-2 border bg-indigo-500 border-indigo-600 text-white font-bold rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
               </div>
-              <div class="control">
-                <button class="inline-flex px-4 py-2 bg-indigo-500 text-white font-bold rounded focus:outline-none focus:shadow-outline" type="reset">Submit</button>
+              <div class="mr-2">
+                <button class="inline-flex px-4 py-2 border font-bold rounded focus:outline-none focus:shadow-outline" type="reset">Reset</button>
               </div>
+              <div class="form-submit-text self-center"></div>
             </div>
           </form>
         </div>
       </div>
     </div>
+    <!-- for building css -->
+    <div class="text-red-500"></div>
+    <div class="text-indigo-500"></div>
+    <script type="text/javascript" src="/client/js/app.js"></script>
   </body>
 </html>
