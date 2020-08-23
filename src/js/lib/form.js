@@ -21,6 +21,10 @@ class Form {
   }
 
   async submit(e) {
+    if (this.controlEl && !e.target.closest(this.form)) {
+      return;
+    }
+
     e.preventDefault();
 
     if (this.isSubmitted) {
