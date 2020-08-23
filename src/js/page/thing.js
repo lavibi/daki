@@ -13,6 +13,7 @@ export default () => {
   thingTransEls.forEach(el => {
     el.addEventListener('click', async (e) => {
       e.preventDefault();
+      document.getElementById('thing-trans-modal').querySelector('.modal-container').innerHTML = '... loading';
       const link = el.getAttribute('href');
       const response = await fetch(link);
       const content = await response.text();
