@@ -31,10 +31,10 @@ class Form {
 
     const form = e.target;
     const body = new FormData(form);
+    const resetSuccess = form.getAttribute('data-reset') === '1';
     const method = 'post';
     const link = form.getAttribute('action');
     const helperTextEl = form.querySelector('.form-submit-text');
-    console.log(helperTextEl);
     const submitButton = form.querySelector('button[type=submit]');
     const submitButtonText = submitButton.innerText;
 
@@ -57,6 +57,10 @@ class Form {
       } else {
         helperTextEl.innerText = 'Submit successed.';
         helperTextEl.classList.add('text-indigo-500');
+
+        if (resetSuccess) {
+          form.reset();
+        }
       }
     } catch (e) {
       helperTextEl.innerText = 'Please try again.';
