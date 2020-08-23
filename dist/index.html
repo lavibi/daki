@@ -41,23 +41,27 @@
             <div class="my-2 px-2 w-3/5">Title</div>
             <div class="my-2 px-2 w-1/5">Member</div>
           </div>
-          <div class="flex border-b-2 hover:bg-gray-100 items-center">
+          <div class="thing flex border-b-2 hover:bg-gray-100 items-center">
             <div class="my-2 px-2 w-3/5">Item title</div>
             <div class="my-2 px-2 w-1/5"><img src="/client/image/client_logo.jpg" class="w-8 h-8 rounded-full"></div>
             <div class="my-2 px-2 w-1/5 ml-auto text-right">
-              <a class="font-bold py-1 px-2 text-sm rounded border bg-white focus:outline-none" href="#">🇻🇳</a>
-              <a class="font-bold py-1 px-2 text-sm rounded border bg-white focus:outline-none" href="#">🇹🇼</a>
-              <a class="font-bold py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="#">Del</a>
+              <a class="thing-trans font-bold py-1 px-2 text-sm rounded border bg-white focus:outline-none" href="/form_modal.html">🇻🇳</a>
+              <a class="thing-trans font-bold py-1 px-2 text-sm rounded border bg-white focus:outline-none" href="/form_modal.html">🇫🇷</a>
+              <a class="font-bold py-1 px-2 text-sm rounded border bg-white focus:outline-none" href="">Edit</a>
+              <a class="thing-delete font-bold py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="/thing/name/1/delete">Del</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="bg-gray-100 fixed top-0 right-0 bottom-0 h-full overflow-y-auto shadow p-8" style="width: 800px;">
-      <div class="fixed bg-gray-300 border p-1" style="top: 1rem;right:1rem;">x</div>
-      <div class="relative" style="height: 1000px;">
+    <div id="modal" class="hidden cursor-pointer fixed left-0 top-0 right-0 bottom-0 overflow-y-auto z-40">
+      <div id="thing-trans-modal" class="hidden cursor-default float-right bg-gray-100 min-h-full shadow p-8" style="width: 800px;">
+        <div class="modal-close fixed bg-gray-300 border p-1 z-50 cursor-pointer" style="top: 1rem;right:1rem;">x</div>
+        <div class="modal-container">
 
+        </div>
       </div>
     </div>
+    <script type="text/javascript" src="/client/js/app.js"></script>
   </body>
 </html>
