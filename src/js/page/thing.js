@@ -5,6 +5,7 @@ import upload from '../component/upload_image';
 
 const thingTransEls = document.querySelectorAll('.thing-trans');
 const fileSelectionEl = document.getElementById('file-selection');
+const fileSelectionRemoveEl = document.getElementById('file-selection-remove');
 
 export default () => {
   del('.thing-delete', { parent: '.thing' });
@@ -12,6 +13,7 @@ export default () => {
   upload('#file-browser', '#file-trigger-browser', '#file-preview', '#form-upload-control', '#form-upload-button', '#media-list', {
     element: '#file-selection-modal',
     addDelete: false,
+    addClass: 'cursor-pointer'
   });
 
   // Translate modal
@@ -37,6 +39,12 @@ export default () => {
       const response = await fetch(link);
       const content = await response.text();
       document.getElementById('file-selection-modal').querySelector('.modal-container').innerHTML = content;
+      const currentId = document.getElementById('file-selection-input').value;
+      const selectFileEl = document.getElementById('file' + currentId);
+      if (selectFileEl) {
+        selectFileEl.classList.add('border-4');
+        selectFileEl.classList.add('border-indigo-500');
+      }
     })
 
     document.getElementById('file-selection-modal').addEventListener('click', (e) => {
@@ -51,6 +59,35 @@ export default () => {
 
       document.getElementById('file-selection-input').value = fileId;
       document.getElementById('file-selection-preview').setAttribute('src', imgLink);
+
+      document.querySelectorAll('.media-file').forEach((el) => {
+        el.classList.remove('border-4')
+        el.classList.remove('border-indigo-500')
+      })
+      el.classList.add('border-4')
+      el.classList.add('border-indigo-500')
+
+      if (fileSelectionRemoveEl) {
+        fileSelectionRemoveEl.classList.remove('hidden');
+      }
     })
+
+    if (fileSelectionRemoveEl) {
+      fileSelectionRemoveEl.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('file-selection-input').value = '';
+        document.getElementById('file-selection-preview').setAttribute('src', '');
+        fileSelectionRemoveEl.classList.add('hidden');
+      })
+    }
+
+    const form = document.querySelector('form')
+    if (form && fileSelectionRemoveEl) {
+      form.addEventListener('reset', (e) => {
+        document.getElementById('file-selection-input').value = '';
+        document.getElementById('file-selection-preview').setAttribute('src', '');
+        fileSelectionRemoveEl.classList.add('hidden');
+      })
+    }
   }
 }

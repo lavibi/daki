@@ -8,6 +8,7 @@ class UploadImage {
     this.list = list;
     this.options = {
       addDelete: true,
+      addClass: '',
       ...options
     };
 
@@ -124,7 +125,7 @@ class UploadImage {
   addNewImageElement(id, link) {
     const photoEl = document.createElement('div')
     photoEl.id = 'file-' + id;
-    photoEl.className = 'media-file flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative';
+    photoEl.className = 'media-file flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative ' + this.options.addClass;
     photoEl.innerHTML = `
       <img class="max-h-full" src="${link}">
       ${!this.options.addDelete ? '' : `
