@@ -40,7 +40,7 @@ export default () => {
       const content = await response.text();
       document.getElementById('file-selection-modal').querySelector('.modal-container').innerHTML = content;
       const currentId = document.getElementById('file-selection-input').value;
-      const selectFileEl = document.getElementById('file' + currentId);
+      const selectFileEl = document.getElementById('file-' + currentId);
       if (selectFileEl) {
         selectFileEl.classList.add('border-4');
         selectFileEl.classList.add('border-indigo-500');
