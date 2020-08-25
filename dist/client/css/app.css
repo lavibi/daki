@@ -962,6 +962,10 @@ video {
   min-height: 100%;
 }
 
+.outline-none {
+  outline: 0;
+}
+
 .focus\:outline-none:focus {
   outline: 0;
 }

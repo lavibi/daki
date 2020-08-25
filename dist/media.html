@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Daki</title>
+    <title>Daki / Media</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='/client/image/client_logo.jpg' rel='shortcut icon' type='image/jpg'>
     <link rel="stylesheet" href="/client/css/app.css" />
   </head>
-  <body>
+  <body class="page-file">
     <!-- NAV -->
     <nav class="fixed bg-gray-100 top-0 left-0 bottom-0 w-full overflow-y-auto max-w-nav border-r">
       <div class="flex p-4">
@@ -38,18 +39,18 @@
         </div>
 
         <!-- content -->
-        <form class="hidden" id="file-form" action="" method="POST" enctype="multipart/form-data">
+        <form class="hidden" action="" method="POST" enctype="multipart/form-data">
           <input id="file-browser" type="file" name="file">
         </form>
         <div>
           <div id="media-list" class="flex flex-wrap">
-            <div id="form-upload" class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
+            <div class="flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">
               <img class="max-h-full" id="file-preview" src="">
               <div id="file-trigger-browser" class="absolute top-2 left-2 right-2 bottom-2 border-2 border-dashed flex justify-center items-center cursor-pointer">
                 Choose media
               </div>
               <div id="form-upload-control" class="hidden absolute right-0 bottom-0 justify-center items-center">
-                <button id="form-upload-button" class="appearance-none font-bold cursor-pointer py-2 px-4 text-sm rounded border focus:outline-none bg-indigo-600 text-white" href="#">+</button>
+                <button id="form-upload-button" data-name="file" data-link="/upload_true.json" class="appearance-none font-bold cursor-pointer py-2 px-4 text-sm rounded border focus:outline-none bg-indigo-600 text-white">+</button>
               </div>
             </div>
             <div id="media-1" class="media-file flex justify-center items-center w-150px h-150px shadow mr-4 mb-4 p-2 relative">

@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <link href='/client/image/client_logo.jpg' rel='shortcut icon' type='image/jpg'>
     <link rel="stylesheet" href="/client/css/app.css" />
   </head>
-  <body>
+  <body class="page-thing">
     <!-- NAV -->
     <nav class="fixed bg-gray-100 top-0 left-0 bottom-0 w-full overflow-y-auto max-w-nav border-r">
       <div class="flex p-4">
@@ -70,6 +71,19 @@
               </div>
             </div>
 
+            <div class="mb-4">
+              <label class="block font-bold">Photo</label>
+              <div>
+                <input id="file-selection-input" name="photo" type="hidden">
+                <div class="flex justify-center items-center w-150px h-150px mb-4 relative">
+                  <img id="file-selection-preview" class="max-h-full" src="">
+                  <a href="/media_modal.html" id="file-selection" class="absolute top-0 left-0 right-0 bottom-0 border-2 border-dashed flex justify-center items-center cursor-pointer outline-none">
+                    Select file
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div class="flex">
               <div class="mr-2">
                 <button class="inline-flex px-4 py-2 border bg-indigo-500 border-indigo-600 text-white font-bold rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
@@ -80,6 +94,14 @@
               <div class="form-submit-text self-center"></div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal" class="hidden cursor-pointer fixed left-0 top-0 right-0 bottom-0 overflow-y-auto z-40">
+      <div id="file-selection-modal" class="hidden cursor-default float-right bg-gray-100 min-h-full shadow p-8" style="width: 800px;">
+        <div class="modal-close fixed bg-gray-300 border p-1 z-50 cursor-pointer" style="top: 1rem;right:1rem;">x</div>
+        <div class="modal-container">
+
         </div>
       </div>
     </div>
