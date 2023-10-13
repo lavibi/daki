@@ -130,7 +130,7 @@ class UploadImage {
       <img class="max-h-full" src="${link}">
       ${!this.options.addDelete ? '' : `
         <div class="absolute right-3 bottom-3">
-          <a class="media-file-del font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="/file/${id}/delete">x</a>
+          <a class="media-file-del font-bold cursor-pointer py-1 px-2 text-sm rounded border border-red-700 bg-red-600 focus:outline-none text-white" href="./file/${id}/delete">x</a>
         </div>
         `
       }
